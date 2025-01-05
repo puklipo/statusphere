@@ -65,6 +65,7 @@ $submit = function (string $emoji) {
     <div class="flex flex-wrap gap-2">
         @foreach(config('statusphere.status') as $emoji)
             <button wire:click="submit('{{ $emoji }}')"
+                    wire:loading.attr="disabled"
                     class="rounded-full p-1 shadow-sm border border-gray-200 dark:border-gray-500 bg-white dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-blue-400
                 @if($myStatus === $emoji) border-blue-500 dark:border-blue-600 bg-blue-100 dark:bg-blue-900 @endif">{{ $emoji }}</button>
         @endforeach
