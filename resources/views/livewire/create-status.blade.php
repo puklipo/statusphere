@@ -31,6 +31,7 @@ $submit = function (string $emoji) {
         );
 
     if ($res->successful()) {
+        $this->myStatus = $emoji;
         auth()->user()->touch();
         $this->dispatch('status-created');
     } else {
