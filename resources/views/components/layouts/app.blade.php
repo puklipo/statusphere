@@ -17,7 +17,7 @@
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-white dark:bg-gray-800 dark:text-white">
     <header class="py-2 bg-blue-500 text-white text-center">
-        This is the Laravel version of <a href="https://atproto.com/guides/applications" target="_blank" class="underline">Statusphere</a>. <a href="https://github.com/puklipo/statusphere" target="_blank">GitHub</a>
+        This is the Laravel version of <a href="https://atproto.com/guides/applications" target="_blank" class="underline">Statusphere</a>. <a href="https://github.com/puklipo/statusphere" target="_blank" class="underline">GitHub</a>
     </header>
 
     <main class="max-w-2xl mx-auto px-4">
