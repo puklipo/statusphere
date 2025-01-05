@@ -4,9 +4,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use Livewire\Volt\Volt;
 
-Route::get('login', function () {
-    return Socialite::driver('bluesky')->redirect();
+Route::get('login', function (Request $request) {
+    return Socialite::driver('bluesky')->hint($request->input('hint'))->redirect();
 })->name('login');
 
 Route::get('callback', function (Request $request) {
@@ -42,9 +43,11 @@ Route::get('/', function (Request $request) {
         return to_route('bluesky.oauth.redirect', $request->query());
     }
 
-    return view('welcome');
-});
+    $users = User::latest('updated_at')->limit(20)->get();
 
-Route::get('home', function (Request $request) {
-    dump($request->user());
-})->name('home');
+    return view('welcome')->with(compact('users'));
+})->name('welcome');
+
+Volt::route('home', 'home')
+    ->name('home')
+    ->middleware('auth');

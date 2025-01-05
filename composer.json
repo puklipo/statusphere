@@ -13,7 +13,7 @@
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "livewire/volt": "^1.6",
-        "revolution/laravel-bluesky": "^0.16.1"
+        "revolution/laravel-bluesky": "^0.16.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -22,7 +22,8 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.1",
-        "phpunit/phpunit": "^11.0.1"
+        "phpunit/phpunit": "^11.0.1",
+        "revolution/laravel-vercel-installer": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -55,6 +56,9 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "vercel": [
+            "npm run build"
         ]
     },
     "extra": {

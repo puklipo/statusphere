@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.status-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.status-line:not(.no-line)::before {
+    content: '';
+    position: absolute;
+    width:1px;
+    background-color: #ddd;
+    left: 1.00rem;
+    bottom: calc(100% + 1px);
+    height: 13px;
+}
