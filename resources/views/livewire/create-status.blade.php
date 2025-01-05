@@ -68,7 +68,11 @@ $submit = function (string $emoji) {
             <button wire:click="submit('{{ $emoji }}')"
                     wire:loading.attr="disabled"
                     class="rounded-full p-1 shadow-sm border hover:bg-blue-200 dark:hover:bg-blue-400 disabled:opacity-50
-                @if($myStatus === $emoji) border-blue-500 dark:border-blue-600 bg-blue-100 dark:bg-blue-900 @else border-gray-200 dark:border-gray-500 bg-white dark:bg-gray-900 @endif">{{ $emoji }}</button>
+                @if($myStatus === $emoji)
+                border-blue-500 dark:border-blue-600 bg-blue-100 dark:bg-blue-900
+                @else
+                border-gray-200 dark:border-gray-500 bg-white dark:bg-gray-900
+                @endif">{{ $emoji }}</button>
         @endforeach
     </div>
     <div class="text-blue-500" wire:loading>
