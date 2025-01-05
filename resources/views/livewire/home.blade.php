@@ -38,9 +38,9 @@ mount(function () {
     $this->myStatus = data_get($this->statuses->first(), 'value.status');
 });
 
-on(['status-created' => function () {
-    $this->redirectRoute('home');
-}]);
+//on(['status-created' => function () {
+    //$this->redirectRoute('home');
+//}]);
 
 $logout = function () {
     session()->forget('bluesky_session');
@@ -52,7 +52,7 @@ $logout = function () {
 };
 ?>
 
-<div>
+<div wire:status-created.window="$refresh">
     <div class="my-5 py-3 px-8 grid grid-cols-2">
         <div>
             Hi, <strong>{{ data_get($profile, 'displayName', 'friend') }}</strong>. What's
