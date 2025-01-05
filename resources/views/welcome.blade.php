@@ -1,12 +1,19 @@
 <x-layouts.app>
     <div class="text-center text-xl">
-        <div>
-            <a href="{{ route('login') }}">Log in</a> to set your status!
-        </div>
-        <div>
-            <a href="{{ route('login', ['hint' => auth()->user()?->handle]) }}"
-               class="text-white bg-blue-500 px-3 rounded-l-full rounded-r-full">Log in</a>
-        </div>
+        @auth
+            <div>
+                <a href="{{ route('home') }}"
+                   class="text-white bg-blue-500 px-3 rounded-l-full rounded-r-full">Home</a>
+            </div>
+        @else
+            <div>
+                <a href="{{ route('login') }}">Log in</a> to set your status!
+            </div>
+            <div>
+                <a href="{{ route('login', ['hint' => auth()->user()?->handle]) }}"
+                   class="text-white bg-blue-500 px-3 rounded-l-full rounded-r-full">Log in</a>
+            </div>
+        @endauth
     </div>
 
     <div class="mt-5">
