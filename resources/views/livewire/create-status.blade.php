@@ -19,6 +19,8 @@ $submit = function (string $emoji) {
         return redirect(route('login'));
     }
 
+    $this->myStatus = $emoji;
+
     $status = Status::create(status: $emoji);
 
     $res = Bluesky::withToken($session)
@@ -31,7 +33,6 @@ $submit = function (string $emoji) {
         );
 
     if ($res->successful()) {
-        $this->myStatus = $emoji;
         auth()->user()->touch();
         $this->dispatch('status-created');
     } else {
