@@ -57,7 +57,8 @@ $submit = function (string $emoji) {
                 Warning
             </div>
             <div class="p-1">
-                This posting function does not work in local. Use the <code class="bg-gray-100 dark:bg-gray-900">php artisan bsky:create-status</code> command instead, which uses an app password.
+                This posting function does not work in local. Use the <code class="bg-gray-100 dark:bg-gray-900">php
+                    artisan bsky:create-status</code> command instead, which uses an app password.
             </div>
         </div>
     @endif
@@ -66,8 +67,11 @@ $submit = function (string $emoji) {
         @foreach(config('statusphere.status') as $emoji)
             <button wire:click="submit('{{ $emoji }}')"
                     wire:loading.attr="disabled"
-                    class="rounded-full p-1 shadow-sm border border-gray-200 dark:border-gray-500 bg-white dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-blue-400
-                @if($myStatus === $emoji) border-blue-500 dark:border-blue-600 bg-blue-100 dark:bg-blue-900 @endif">{{ $emoji }}</button>
+                    class="rounded-full p-1 shadow-sm border hover:bg-blue-200 dark:hover:bg-blue-400 disabled:opacity-50
+                @if($myStatus === $emoji) border-blue-500 dark:border-blue-600 bg-blue-100 dark:bg-blue-900 @else border-gray-200 dark:border-gray-500 bg-white dark:bg-gray-900 @endif">{{ $emoji }}</button>
         @endforeach
+    </div>
+    <div class="text-blue-500" wire:loading>
+        Creating status...
     </div>
 </div>
