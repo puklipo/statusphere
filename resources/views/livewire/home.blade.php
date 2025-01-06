@@ -35,8 +35,12 @@ mount(function () {
     $this->myStatus = data_get($this->statuses->first(), 'value.status');
 });
 
-on(['status-created' => function () {
-    $this->redirectRoute('home');
+on(['status-created' => function ($status) {
+    $this->statuses->prepend(['value' => [
+        'status' => $status,
+        'createdAt' => now(),
+    ]]);
+    $this->myStatus = $status;
 }]);
 
 $logout = function () {
