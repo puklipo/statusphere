@@ -33,7 +33,7 @@ Route::get('callback', function (Request $request) {
         'refresh_token' => $session->refresh(),
     ]);
 
-    auth()->login($user, remember: true);
+    auth()->login($user, remember: false);
 
     return to_route('home');
 })->name('bluesky.oauth.redirect');
