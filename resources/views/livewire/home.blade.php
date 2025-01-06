@@ -2,6 +2,7 @@
 
 use App\Record\Status;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Session\OAuthSession;
 
@@ -36,10 +37,13 @@ mount(function () {
 });
 
 on(['status-created' => function ($status) {
-    $this->statuses->prepend(['value' => [
-        'status' => $status,
-        'createdAt' => now(),
-    ]]);
+    $this->statuses->prepend([
+        'uri' => 'at://'.Str::random(),
+        'value' => [
+            'status' => $status,
+            'createdAt' => now(),
+        ],
+    ]);
     $this->myStatus = $status;
 }]);
 
@@ -69,7 +73,7 @@ $logout = function () {
 
     <div class="mt-5">
         @foreach($statuses as $status)
-            <div class="my-3 status-line @if($loop->first) no-line @endif">
+            <div class="my-3 status-line @if($loop->first) no-line @endif" wire:key="{{ data_get($status, 'uri') }}">
                 <x-emoji>{{ data_get($status, 'value.status') }}</x-emoji>
                 <span class="ml-1">
                     <span class="font-bold">
