@@ -13,5 +13,5 @@ Statusphere Laravel edition
 
 ## Server
 - Vercel
-- AWS RDS
+- ~~AWS RDS~~ Neon Postgres
 
