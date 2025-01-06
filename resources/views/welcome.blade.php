@@ -19,7 +19,7 @@
     <div class="mt-5">
         @foreach($users as $user)
             @unless(empty($user->status))
-                <div class="my-3 status-line @if($loop->first) no-line @endif" wire:key="{{ $user->did }}">
+                <div class="my-3 status-line @if($loop->first) no-line @endif" wire:key="{{ $user->id }}">
                     <x-emoji>{{ data_get($user->status, 'value.status') }}</x-emoji>
                     <span class="ml-1">
                         <span class="font-bold">{{ '@'.Str::mask($user->handle, '*', 1) }}</span>
