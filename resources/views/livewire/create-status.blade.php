@@ -83,6 +83,9 @@ $submit = function (string $emoji) {
                     @endif">{{ $emoji }}</button>
         @endforeach
     </div>
+
+    <div class="text-red-500">@error('emoji') {{ $message }} @enderror</div>
+
     <div class="text-blue-500" wire:loading>
         Creating status...
     </div>
