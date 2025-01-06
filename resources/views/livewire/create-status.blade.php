@@ -1,19 +1,26 @@
 <?php
 
 use App\Record\Status;
+use Illuminate\Validation\Rule;
 use Revolution\Bluesky\Core\TID;
 use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Session\OAuthSession;
 
-use function Livewire\Volt\{mount, state};
+use function Livewire\Volt\{mount, state, rules};
 
-state(['myStatus']);
+state(['emoji', 'myStatus']);
+
+rules(['emoji' => ['required', Rule::in(config('statusphere.status'))]]);
 
 mount(function (?string $myStatus = null) {
     $this->myStatus = $myStatus;
 });
 
 $submit = function (string $emoji) {
+    $this->emoji = $emoji;
+
+    $this->validate();
+
     $session = OAuthSession::create(session('bluesky_session'));
     if ($session->tokenExpired()) {
         return redirect(route('login'));
