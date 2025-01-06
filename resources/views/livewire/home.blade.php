@@ -26,9 +26,6 @@ mount(function () {
 
     $this->statuses = $res->collect('records')
         ->map(function ($record) {
-            data_set($record, 'handle', data_get($this->profile, 'handle'));
-            data_set($record, 'link', 'https://bsky.app/profile/'.data_get($this->profile, 'did'));
-
             $date = Carbon::parse(data_get($record, 'value.createdAt'));
             data_set($record, 'value.createdAt', $date);
 
@@ -72,8 +69,10 @@ $logout = function () {
                 <x-emoji>{{ data_get($status, 'value.status') }}</x-emoji>
                 <span class="ml-1">
                     <span class="font-bold">
-                        <a href="{{ data_get($status, 'link') }}"
-                           target="_blank">{{ '@'.data_get($status, 'handle') }}</a>
+                        <a href="https://bsky.app/profile/{{ data_get($profile, 'did') }}"
+                           target="_blank">
+                            {{ '@'.data_get($profile, 'handle') }}
+                        </a>
                     </span>
                     <x-status-desc :status="$status"></x-status-desc>
                 </span>
