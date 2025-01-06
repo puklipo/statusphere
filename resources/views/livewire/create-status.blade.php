@@ -40,7 +40,7 @@ $submit = function (string $emoji) {
     if ($res->successful()) {
         $this->myStatus = $emoji;
         auth()->user()->touch();
-        $this->dispatch('status-created');
+        $this->dispatch('status-created', status: $emoji);
     } else {
         session()->flash('status-error', $res->json());
     }
