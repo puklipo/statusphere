@@ -21,7 +21,7 @@ mount(function () {
         ->listRecords(
             repo: Bluesky::assertDid(),
             collection: Status::NSID,
-            limit: 100,
+            limit: 20,
         );
 
     $this->statuses = $res->collect('records')
