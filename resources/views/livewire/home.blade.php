@@ -60,8 +60,8 @@ $logout = function () {
 <div>
     <div class="my-5 py-3 px-8 grid grid-cols-2">
         <div>
-            Hi, <strong>{{ data_get($profile, 'displayName', 'friend') }}</strong>. What's
-            your status today?
+            Hi, <strong>{{ data_get($profile, 'displayName', 'friend') }}</strong>.
+            What's your status today?
         </div>
         <div class="text-right">
             <button wire:click="logout" class="text-white bg-blue-500 px-3 rounded-l-full rounded-r-full">Log out
