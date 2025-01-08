@@ -7,11 +7,11 @@ Statusphere Laravel edition
 
 ## Version
 - Laravel 11.x
-- Livewire 3.x / Volt 1.x
+- Livewire 3.5.x / Volt 1.6.x
 - laravel-bluesky 0.16.x
 - No Firehose
 
 ## Server
 - Vercel
-- ~~AWS RDS~~ Neon Postgres
+- ~~AWS RDS~~ Neon Postgres (slow)
 
