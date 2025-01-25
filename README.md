@@ -19,3 +19,5 @@ Bluesky/AT Protocol Statusphere Laravel edition
 
 - https://zenn.dev/pcs_engineer/books/re-laravel-5/viewer/bluesky-statusphere
 
+## LICENCE
+MIT
