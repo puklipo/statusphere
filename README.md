@@ -6,9 +6,9 @@ Bluesky/AT Protocol Statusphere Laravel edition
 - https://github.com/kawax/laravel-bluesky
 
 ## Version
-- Laravel 11.x
+- Laravel 12.x
 - Livewire 3.5.x / Volt 1.6.x
-- laravel-bluesky 0.16.x
+- laravel-bluesky 1.x
 - No Firehose
 
 ## Server
