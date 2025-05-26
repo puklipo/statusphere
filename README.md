@@ -11,9 +11,5 @@ Bluesky/AT Protocol Statusphere Laravel edition
 - laravel-bluesky 1.x
 - No Firehose
 
-## 日本語の解説
-
-- https://zenn.dev/pcs_engineer/books/re-laravel-5/viewer/bluesky-statusphere
-
 ## LICENCE
 MIT
