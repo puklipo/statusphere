@@ -1,7 +1,6 @@
 Bluesky/AT Protocol Statusphere Laravel edition
 ====
 
-- https://statusphere.puklipo.com
 - https://atproto.com/guides/applications
 - https://github.com/kawax/laravel-bluesky
 
@@ -11,10 +10,6 @@ Bluesky/AT Protocol Statusphere Laravel edition
 - Livewire 3.x / Volt 1.6.x
 - laravel-bluesky 1.x
 - No Firehose
-
-## Server
-- Vercel
-- ~~AWS RDS~~ Neon Postgres (slow)
 
 ## 日本語の解説
 
