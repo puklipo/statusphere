@@ -1,6 +1,4 @@
-# Statusphere
-
-This project is the Laravel edition of Statusphere, the official sample of Bluesky/AT Protocol.
+# Statusphere Laravel edition
 
 ## About
 
