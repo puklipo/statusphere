@@ -2,7 +2,7 @@ Bluesky/AT Protocol Statusphere Laravel edition
 ====
 
 - https://atproto.com/guides/applications
-- https://github.com/kawax/laravel-bluesky
+- https://github.com/invokable/laravel-bluesky
 - https://statusphere.puklipo.com/
 
 ## Version
