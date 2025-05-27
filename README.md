@@ -16,7 +16,7 @@ A live version of this application is available at [https://statusphere.puklipo.
 - Tailwind 4.x
 - Livewire 3.x / Volt 1.6.x
 - laravel-bluesky 1.x
-- No WebSocket/Firehose
+- No WebSocket/Firehose (PHPではsupervisorなどの使い方に慣れてない人が多いのでWebSocketは使わない)
 
 ## Server Infrastructure
 
