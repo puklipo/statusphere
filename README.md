@@ -12,5 +12,10 @@ Bluesky/AT Protocol Statusphere Laravel edition
 - laravel-bluesky 1.x
 - No Firehose
 
+## Server
+- AWS EC2
+- RDS
+- Laravel Forge
+
 ## LICENCE
 MIT
