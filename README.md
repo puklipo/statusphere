@@ -10,7 +10,7 @@ Bluesky/AT Protocol Statusphere Laravel edition
 - Tailwind 4.x
 - Livewire 3.x / Volt 1.6.x
 - laravel-bluesky 1.x
-- No Firehose
+- No WebSocket/Firehose
 
 ## Server
 - AWS EC2
