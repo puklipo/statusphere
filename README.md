@@ -24,6 +24,35 @@ A live version of this application is available at [https://statusphere.puklipo.
 - RDS
 - Laravel Forge
 
+## Comparison with Node.js Version
+
+This Laravel implementation differs from the [official Node.js version](https://atproto.com/guides/applications) in several ways:
+
+### Authentication
+- Uses Laravel Socialite for Bluesky OAuth integration
+- Stores authentication tokens in Laravel session
+- Implements user model with Bluesky profile data
+
+### Data Handling
+- Uses Laravel Bluesky package for AT Protocol API calls
+- Implements custom Status record model with NSID
+- Uses Laravel's Eloquent ORM for data persistence
+
+### User Interface
+- Built with Livewire for reactive components
+- Uses Blade templating with Tailwind CSS
+- Implements Volt for single-file components
+
+### Event Handling
+- Uses Laravel event listeners instead of WebSockets
+- Processes Bluesky commit events through StatusListener
+- Implements Laravel queue system for background processing
+
+### Development Experience
+- Provides Laravel-specific tooling (Sail, Pint, Pail)
+- Uses Laravel's configuration system for emoji definitions
+- Supports Laravel's deployment workflows
+
 ## License
 
 MIT
