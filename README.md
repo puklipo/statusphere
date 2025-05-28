@@ -8,6 +8,12 @@ Statusphere is a sample application demonstrating how to use the [Laravel Bluesk
 
 A live version of this application is available at [https://statusphere.puklipo.com/](https://statusphere.puklipo.com/). Users can log in with their Bluesky account to try the application.
 
+### Server Infrastructure
+
+- AWS EC2
+- RDS(MySQL)
+- Laravel Forge
+
 ## Technology Stack
 
 - Laravel 12.x
@@ -15,12 +21,6 @@ A live version of this application is available at [https://statusphere.puklipo.
 - Livewire 3.x / Volt 1.6.x
 - laravel-bluesky 1.x
 - No WebSocket/Firehose (Many PHP developers are not familiar with using supervisor, so WebSockets are not used)
-
-## Server Infrastructure
-
-- AWS EC2
-- RDS
-- Laravel Forge
 
 ## AT Protocol Integration
 
