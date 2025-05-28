@@ -96,8 +96,8 @@ Note: The current implementation prioritizes simplicity and accessibility for PH
 ```bash
 git clone https://github.com/invokable/statusphere.git
 cd statusphere
-composer install
 cp .env.example .env
+composer install
 composer run post-create-project-cmd
 npm install
 npm run build
