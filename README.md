@@ -128,7 +128,7 @@ BLUESKY_OAUTH_PRIVATE_KEY="..."
 
 ### Bluesky Account Configuration
 
-After setting up OAuth, configure your Bluesky account credentials:
+Due to OAuth limitations, posting from local environments is not supported with OAuth authentication. Instead, you need to use App Password authentication for local development and testing. Configure your Bluesky account credentials:
 
 ```
 // .env
@@ -136,6 +136,14 @@ After setting up OAuth, configure your Bluesky account credentials:
 BLUESKY_IDENTIFIER=***.bsky.social
 BLUESKY_APP_PASSWORD=****-****-****-****
 ```
+
+For local development, use the following command to create status updates:
+
+```bash
+php artisan bsky:create-status
+```
+
+This command uses App Password authentication to post status updates to your Bluesky account.
 
 ```bash
 php artisan serve
