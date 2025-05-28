@@ -153,6 +153,73 @@ Finally, start with the Laravel local server command. You can view it at http://
 php artisan serve
 ```
 
+## Advanced Usage
+
+If you want to create a more official-like implementation, you can also use WebSockets to receive and store data.
+The laravel-bluesky package supports both Firehose and Jetstream, but Jetstream is easier to use when you only need data from specific collections like in this case.
+Note that this Jetstream is Bluesky's Jetstream, not Laravel's Jetstream with the same name, which can be confusing.
+You can check what kind of data is received on GitHub:
+https://github.com/bluesky-social/jetstream
+
+
+Run the command specifying the collection continuously using Supervisor:
+```shell
+php artisan bluesky:ws start -C com.puklipo.statusphere.status
+```
+
+When data is received, a `JetstreamCommitMessage` event is fired, which can be captured by a Listener and saved to the database:
+
+```shell
+php artisan make:listener StatusListener
+```
+
+```php:app/Listeners/StatusListener.php
+namespace App\Listeners;
+
+use App\Record\Status;
+use Revolution\Bluesky\Events\Jetstream\JetstreamCommitMessage;
+
+class StatusListener
+{
+    /**
+     * Create the event listener.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the event.
+     */
+    public function handle(JetstreamCommitMessage $event): void
+    {
+        if ($event->operation !== 'create') {
+            return;
+        }
+
+        $collection = data_get($event->message, 'commit.collection');
+        if ($collection !== Status::NSID) {
+            return;
+        }
+
+        $did = data_get($event->message, 'did');
+        $status = data_get($event->message, 'commit.record.status');
+        $createdAt = data_get($event->message, 'commit.record.createdAt');
+
+        // Save status to database
+    }
+}
+```
+
+If you actually use this approach, other parts of the application would need to be modified as well.
+This is just for explanation purposes in the advanced section, so no further implementation is provided.
+
+When deploying to production, terminate with `stop` and configure Supervisor to automatically restart:
+```shell
+php artisan bluesky:ws stop
+```
+
 ## License
 
 MIT
