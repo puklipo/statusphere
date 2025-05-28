@@ -101,14 +101,34 @@ npm install
 npm run build
 ```
 
-```
+### OAuth Configuration
+
+For Bluesky OAuth authentication, you need to create a private key. This is required before using any OAuth functionality and is the only configuration needed (no client_id or client_secret registration with Bluesky is required).
+
+Generate a new private key with:
+
+```bash
 php artisan bluesky:new-private-key
 ```
+
+The command will output a URL-safe base64 encoded key like this:
+```
+Please set this private key in .env
+
+BLUESKY_OAUTH_PRIVATE_KEY="...url-safe base64 encoded key..."
+```
+
+Copy and paste this key into your `.env` file:
+
 ```
 // .env
 
 BLUESKY_OAUTH_PRIVATE_KEY="..."
 ```
+
+### Bluesky Account Configuration
+
+Due to OAuth limitations, posting from local environments is not supported with OAuth authentication. Instead, you need to use App Password authentication for local development and testing. Configure your Bluesky account credentials:
 
 ```
 // .env
@@ -116,6 +136,14 @@ BLUESKY_OAUTH_PRIVATE_KEY="..."
 BLUESKY_IDENTIFIER=***.bsky.social
 BLUESKY_APP_PASSWORD=****-****-****-****
 ```
+
+For local development, use the following command to create status updates:
+
+```bash
+php artisan bsky:create-status
+```
+
+This command uses App Password authentication to post status updates to your Bluesky account.
 
 ```bash
 php artisan serve
