@@ -1,8 +1,5 @@
 {
     "private": true,
-    "engines": {
-        "node": "18.x"
-    },
     "type": "module",
     "scripts": {
         "build": "vite build",
