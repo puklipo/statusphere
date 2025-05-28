@@ -1,5 +1,7 @@
 # Statusphere Laravel edition
 
+![statusphere](https://github.com/user-attachments/assets/d3eeee73-9e2b-453b-b58d-d115a841031f)
+
 ## About
 
 Statusphere is a sample application demonstrating how to use the [Laravel Bluesky package](https://github.com/invokable/laravel-bluesky) to integrate with the Bluesky social network. It follows the official [AT Protocol application guidelines](https://atproto.com/guides/applications).
