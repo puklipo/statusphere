@@ -145,6 +145,8 @@ php artisan bsky:create-status
 
 This command uses App Password authentication to post status updates to your Bluesky account.
 
+Finally, start with the Laravel local server command. You can view it at http://localhost:8000.
+
 ```bash
 php artisan serve
 ```
