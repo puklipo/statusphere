@@ -89,6 +89,38 @@ Note: The current implementation prioritizes simplicity and accessibility for PH
 - **Validation**: Both client-side and server-side validation of emoji selections
 - **Session Management**: Automatic token refresh and re-authentication when needed
 
+## Getting Started
+
+```bash
+git clone https://github.com/invokable/statusphere.git
+cd statusphere
+composer install
+cp .env.example .env
+composer run post-create-project-cmd
+npm install
+npm run build
+```
+
+```
+php artisan bluesky:new-private-key
+```
+```
+// .env
+
+BLUESKY_OAUTH_PRIVATE_KEY="..."
+```
+
+```
+// .env
+
+BLUESKY_IDENTIFIER=***.bsky.social
+BLUESKY_APP_PASSWORD=****-****-****-****
+```
+
+```bash
+php artisan serve
+```
+
 ## License
 
 MIT
