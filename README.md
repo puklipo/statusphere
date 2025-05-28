@@ -126,7 +126,7 @@ Copy and paste this key into your `.env` file:
 BLUESKY_OAUTH_PRIVATE_KEY="..."
 ```
 
-### Bluesky Account Configuration
+### App Password Configuration
 
 Due to OAuth limitations, posting from local environments is not supported with OAuth authentication. Instead, you need to use App Password authentication for local development and testing. Configure your Bluesky account credentials:
 
