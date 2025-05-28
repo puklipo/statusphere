@@ -101,14 +101,34 @@ npm install
 npm run build
 ```
 
-```
+### OAuth Configuration
+
+For Bluesky OAuth authentication, you need to create a private key. This is required before using any OAuth functionality and is the only configuration needed (no client_id or client_secret registration with Bluesky is required).
+
+Generate a new private key with:
+
+```bash
 php artisan bluesky:new-private-key
 ```
+
+The command will output a URL-safe base64 encoded key like this:
+```
+Please set this private key in .env
+
+BLUESKY_OAUTH_PRIVATE_KEY="...url-safe base64 encoded key..."
+```
+
+Copy and paste this key into your `.env` file:
+
 ```
 // .env
 
 BLUESKY_OAUTH_PRIVATE_KEY="..."
 ```
+
+### Bluesky Account Configuration
+
+After setting up OAuth, configure your Bluesky account credentials:
 
 ```
 // .env
