@@ -1,6 +1,6 @@
 # Statusphere Laravel edition
 
-![statusphere](https://github.com/user-attachments/assets/d3eeee73-9e2b-453b-b58d-d115a841031f)
+<kbd>![statusphere](https://github.com/user-attachments/assets/d3eeee73-9e2b-453b-b58d-d115a841031f)</kbd>
 
 ## About
 
