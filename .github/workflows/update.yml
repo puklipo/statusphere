@@ -1,11 +1,17 @@
-name: composer update
+name: update
 
 on:
   schedule:
-    - cron: '0 0 * * *' #UTC
+    - cron: '0 4 * * *' #UTC
 
 jobs:
   composer:
     uses: kawax/composer-workflow/.github/workflows/update.yml@v1
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      php: latest
+  npm:
+    uses: kawax/npm-workflow/.github/workflows/update.yml@v1
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
