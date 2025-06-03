@@ -35,5 +35,6 @@ class StatusListener
         $status = data_get($event->message, 'commit.record.status');
         $createdAt = data_get($event->message, 'commit.record.createdAt');
 
+
     }
 }
