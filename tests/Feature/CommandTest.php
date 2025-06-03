@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use Illuminate\Http\Client\Response;
 use Mockery;
-use Revolution\Bluesky\Contracts\Factory;
 use Revolution\Bluesky\Facades\Bluesky;
 use Tests\TestCase;
 
@@ -16,8 +15,8 @@ class CommandTest extends TestCase
         $mockResponse->expects('json')
             ->andReturn(['success' => true]);
 
-        $mockFactory = Mockery::mock(Factory::class);
-        $mockFactory->expects('putRecord')
+        Bluesky::expects('login->putRecord')
+            ->with(Mockery::any(), Mockery::any())
             ->withArgs(function ($repo, $collection, $rkey, $record, $validate) {
                 return is_string($repo) &&
                        is_string($collection) &&
@@ -26,10 +25,6 @@ class CommandTest extends TestCase
                        is_bool($validate);
             })
             ->andReturn($mockResponse);
-
-        Bluesky::expects('login')
-            ->with(Mockery::any(), Mockery::any())
-            ->andReturn($mockFactory);
 
         Bluesky::expects('assertDid')
             ->andReturn('did:plc:test123');

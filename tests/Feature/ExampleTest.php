@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Http\Client\Response;
 use Mockery;
 use Revolution\Bluesky\Facades\Bluesky;
 use Tests\TestCase;
@@ -19,8 +18,7 @@ class ExampleTest extends TestCase
     {
         $this->seed();
 
-        $mockResponse = Mockery::mock(Response::class);
-        $mockResponse->shouldReceive('collect')
+        Bluesky::expects('listRecords->collect')
             ->with('records')
             ->andReturn(collect([
                 [
@@ -30,9 +28,6 @@ class ExampleTest extends TestCase
                     ],
                 ],
             ]));
-
-        Bluesky::shouldReceive('listRecords')
-            ->andReturn($mockResponse);
 
         $response = $this->get('/');
 
