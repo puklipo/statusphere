@@ -21,9 +21,6 @@
         <include>
             <directory>app</directory>
         </include>
-        <exclude>
-            <directory>app/Listeners</directory>
-        </exclude>
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>
