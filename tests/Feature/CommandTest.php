@@ -13,11 +13,11 @@ class CommandTest extends TestCase
     public function test_create_status_command_executes_successfully(): void
     {
         $mockResponse = Mockery::mock(Response::class);
-        $mockResponse->shouldReceive('json')
+        $mockResponse->expects('json')
             ->andReturn(['success' => true]);
 
         $mockFactory = Mockery::mock(Factory::class);
-        $mockFactory->shouldReceive('putRecord')
+        $mockFactory->expects('putRecord')
             ->withArgs(function ($repo, $collection, $rkey, $record, $validate) {
                 return is_string($repo) &&
                        is_string($collection) &&
@@ -27,11 +27,11 @@ class CommandTest extends TestCase
             })
             ->andReturn($mockResponse);
 
-        Bluesky::shouldReceive('login')
+        Bluesky::expects('login')
             ->with(Mockery::any(), Mockery::any())
             ->andReturn($mockFactory);
 
-        Bluesky::shouldReceive('assertDid')
+        Bluesky::expects('assertDid')
             ->andReturn('did:plc:test123');
 
         $this->artisan('bsky:create-status')->assertExitCode(0);
