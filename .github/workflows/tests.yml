@@ -24,6 +24,8 @@ jobs:
         run: composer install -q
       - name: Setup Laravel environment
         run: cp .env.example .env && php artisan key:generate
+      - name: Setup database
+        run: touch database/database.sqlite && php artisan migrate --env=testing
       - name: Test
         run: vendor/bin/phpunit
       - name: Code Coverage
