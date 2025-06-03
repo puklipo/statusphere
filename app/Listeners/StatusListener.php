@@ -35,6 +35,6 @@ class StatusListener
         $status = data_get($event->message, 'commit.record.status');
         $createdAt = data_get($event->message, 'commit.record.createdAt');
 
-
+        // This is an event listener for use with WebSockets. Implement specific code such as saving to a database according to your application.
     }
 }
