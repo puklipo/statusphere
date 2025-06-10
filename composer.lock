@@ -3906,12 +3906,12 @@
             "version": "1.0.68",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kawax/atproto-lexicon-contracts.git",
+                "url": "https://github.com/invokable/atproto-lexicon-contracts.git",
                 "reference": "cb81f1816fa863378b1f729718e72722d97bc596"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/atproto-lexicon-contracts/zipball/cb81f1816fa863378b1f729718e72722d97bc596",
+                "url": "https://api.github.com/repos/invokable/atproto-lexicon-contracts/zipball/cb81f1816fa863378b1f729718e72722d97bc596",
                 "reference": "cb81f1816fa863378b1f729718e72722d97bc596",
                 "shasum": ""
             },
@@ -3946,8 +3946,14 @@
                 "contracts"
             ],
             "support": {
-                "source": "https://github.com/kawax/atproto-lexicon-contracts/tree/1.0.68"
+                "source": "https://github.com/invokable/atproto-lexicon-contracts/tree/1.0.68"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/invokable",
+                    "type": "github"
+                }
+            ],
             "time": "2025-04-19T04:14:25+00:00"
         },
         {
