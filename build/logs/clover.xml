@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1749791847">
-  <project timestamp="1749791847" name="Clover Coverage">
+<coverage generated="1749791939">
+  <project timestamp="1749791939" name="Clover Coverage">
     <package name="App\Console\Commands">
       <file name="/home/runner/work/statusphere/statusphere/app/Console/Commands/CreateStatusCommand.php">
         <class name="App\Console\Commands\CreateStatusCommand" namespace="App\Console\Commands">
