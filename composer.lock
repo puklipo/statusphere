@@ -1161,16 +1161,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.18.0",
+            "version": "v12.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d"
+                "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
+                "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-06-10T14:48:34+00:00"
+            "time": "2025-06-18T12:56:23+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3102,16 +3102,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.43",
+            "version": "3.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "709ec107af3cb2f385b9617be72af8cf62441d02"
+                "reference": "1d0b5e7e1434678411787c5a0535e68907cf82d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/709ec107af3cb2f385b9617be72af8cf62441d02",
-                "reference": "709ec107af3cb2f385b9617be72af8cf62441d02",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/1d0b5e7e1434678411787c5a0535e68907cf82d9",
+                "reference": "1d0b5e7e1434678411787c5a0535e68907cf82d9",
                 "shasum": ""
             },
             "require": {
@@ -3192,7 +3192,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.43"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.44"
             },
             "funding": [
                 {
@@ -3208,7 +3208,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-14T21:12:59+00:00"
+            "time": "2025-06-15T09:59:26+00:00"
         },
         {
             "name": "psr/clock",
@@ -3902,16 +3902,16 @@
         },
         {
             "name": "revolution/atproto-lexicon-contracts",
-            "version": "1.0.68",
+            "version": "1.0.73",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/atproto-lexicon-contracts.git",
-                "reference": "cb81f1816fa863378b1f729718e72722d97bc596"
+                "reference": "cd59174d1a51a830914e96fd586aa44fb1601ec6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/atproto-lexicon-contracts/zipball/cb81f1816fa863378b1f729718e72722d97bc596",
-                "reference": "cb81f1816fa863378b1f729718e72722d97bc596",
+                "url": "https://api.github.com/repos/invokable/atproto-lexicon-contracts/zipball/cd59174d1a51a830914e96fd586aa44fb1601ec6",
+                "reference": "cd59174d1a51a830914e96fd586aa44fb1601ec6",
                 "shasum": ""
             },
             "require": {
@@ -3945,7 +3945,7 @@
                 "contracts"
             ],
             "support": {
-                "source": "https://github.com/invokable/atproto-lexicon-contracts/tree/1.0.68"
+                "source": "https://github.com/invokable/atproto-lexicon-contracts/tree/1.0.73"
             },
             "funding": [
                 {
@@ -3953,20 +3953,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-19T04:14:25+00:00"
+            "time": "2025-06-07T04:05:32+00:00"
         },
         {
             "name": "revolution/laravel-bluesky",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-bluesky.git",
-                "reference": "ca17357cca13acc9369a1faeb237da92b91703f0"
+                "reference": "9bc6df730121634a9dd56ccf1feadd092995034b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/ca17357cca13acc9369a1faeb237da92b91703f0",
-                "reference": "ca17357cca13acc9369a1faeb237da92b91703f0",
+                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/9bc6df730121634a9dd56ccf1feadd092995034b",
+                "reference": "9bc6df730121634a9dd56ccf1feadd092995034b",
                 "shasum": ""
             },
             "require": {
@@ -3977,13 +3977,12 @@
                 "laravel/socialite": "^5.16",
                 "php": "^8.2",
                 "phpseclib/phpseclib": "^3.0",
-                "revolution/atproto-lexicon-contracts": "1.0.68",
+                "revolution/atproto-lexicon-contracts": "1.0.73",
                 "yocto/yoclib-multibase": "^1.2"
             },
             "require-dev": {
-                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.22",
                 "orchestra/testbench": "^9.0||^10.0",
-                "phpstan/extension-installer": "^1.4",
                 "revolt/event-loop": "^1.0",
                 "workerman/workerman": "^5.0"
             },
@@ -4027,10 +4026,15 @@
                 "socialite"
             ],
             "support": {
-                "issues": "https://github.com/invokable/laravel-bluesky/issues",
-                "source": "https://github.com/invokable/laravel-bluesky/tree/1.0.3"
+                "source": "https://github.com/invokable/laravel-bluesky/tree/1.0.4"
             },
-            "time": "2025-04-19T04:18:23+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/invokable",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-06-17T05:06:24+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6651,16 +6655,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.2",
+            "version": "2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3"
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
-                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5",
                 "shasum": ""
             },
             "require": {
@@ -6710,7 +6714,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.2"
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
             },
             "funding": [
                 {
@@ -6718,7 +6722,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-11T20:42:19+00:00"
+            "time": "2025-06-16T00:02:10+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -7341,16 +7345,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "11.0.9",
+            "version": "11.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "14d63fbcca18457e49c6f8bebaa91a87e8e188d7"
+                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/14d63fbcca18457e49c6f8bebaa91a87e8e188d7",
-                "reference": "14d63fbcca18457e49c6f8bebaa91a87e8e188d7",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1a800a7446add2d79cc6b3c01c45381810367d76",
+                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76",
                 "shasum": ""
             },
             "require": {
@@ -7407,15 +7411,27 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.9"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpunit/php-code-coverage",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2025-02-25T13:26:39+00:00"
+            "time": "2025-06-18T08:56:18+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
